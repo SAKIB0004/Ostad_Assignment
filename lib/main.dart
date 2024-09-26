@@ -1,16 +1,26 @@
 import 'Book.dart';
 
 void main() {
-  Book book1 = Book('1984', 'George Orwell', 1949, 50);
-  Book book2 = Book('To Kill a Mockingbird', 'Harper Lee', 1960, 100);
-  Book book3 = Book('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 30);
+  Book book1 = Book(
+      title: 'Ekattarera dinaguli',
+      author: 'Jahanara Imam',
+      publicationYear: 1986,
+      pagesRead: 50);
+  Book book2 = Book(
+      title: 'A Golden Age: A Novel',
+      author: 'Tahmima Anam',
+      publicationYear: 2009,
+      pagesRead: 100);
+  Book book3 = Book(
+      title: 'PATHER PANCHALI',
+      author: 'Bibhutibhushan Banerji',
+      publicationYear: 1971,
+      pagesRead: 30);
 
-  // Simulate reading some pages
-  book1.read(20); // read 20 more pages
-  book2.read(50); // read 50 more pages
-  book3.read(40); // read 40 more pages
+  book1.read(56);
+  book2.read(37);
+  book3.read(97);
 
-  // Print details for each book
   print("Book 1: ${book1.getTitle()} by ${book1.getAuthor()}");
   print(
       "Publication Year: ${book1.getPublicationYear()}, Pages Read: ${book1.getPagesRead()}, Age: ${book1.getBookAge()} years");
@@ -23,6 +33,5 @@ void main() {
   print(
       "Publication Year: ${book3.getPublicationYear()}, Pages Read: ${book3.getPagesRead()}, Age: ${book3.getBookAge()} years");
 
-  // Print the total number of Book objects created
   print("\nTotal number of books: ${Book.totalBooks}");
 }
