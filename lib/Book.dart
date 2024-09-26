@@ -6,7 +6,11 @@ class Book {
 
   static int totalBooks = 0;
 
-  Book(this.title, this.author, this.publicationYear, this.pagesRead) {
+  Book(
+      {required this.title,
+      required this.author,
+      required this.publicationYear,
+      required this.pagesRead}) {
     totalBooks++;
   }
 
@@ -30,7 +34,6 @@ class Book {
     return publicationYear;
   }
 
-  // Method to calculate the age of the book
   int getBookAge() {
     int currentYear = DateTime.now().year;
     return currentYear - publicationYear;
